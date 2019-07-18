@@ -103,7 +103,7 @@ class OffersController extends Controller
 
     public function edit($id)
     {
-        //po zapisaniu edycji przenosi do listy ofert
+        // after saving edition move to offer index
         session()->put('offer_status', 'move_out');
 
         $offer = $this->offer->find($id);
@@ -126,7 +126,7 @@ class OffersController extends Controller
         
         $offer->save();
 
-        //jeśli zmieniam status oferty to przenosi mnie do listy ofert
+        // if offer status changed, move to offer index 
         if ($request->status_id) {
             session()->put('offer_status', 'move_out');
         }

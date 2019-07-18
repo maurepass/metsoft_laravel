@@ -20,7 +20,7 @@
             </form>
         @endif
 
-        <table id='example' class="table table-bordered table-condensed table-striped table-hover">    
+        <table id="example" class="table table-bordered table-condensed table-striped table-hover">    
             <tr>
                 <th>Lp.</th>
                 <th>Nazwa</th>

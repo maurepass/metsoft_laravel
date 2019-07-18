@@ -6,7 +6,7 @@
 
 @section('content')
     <br>
-    <form action='/patterns_search' method="POST" class="fieldset"> 
+    <form action="/patterns_search" method="POST" class="fieldset"> 
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <fieldset>
             <legend>Znajdź modele</legend>

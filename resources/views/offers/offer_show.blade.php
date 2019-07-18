@@ -4,10 +4,21 @@
     <title>METsoft - Oferty</title>
     <meta content="text/html" charset="utf-8">
     <link rel="stylesheet" href="/css/style_print.css" type="text/css">
+
+    <style>
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        table, th, td {
+            border: 1px solid black
+        }
+    </style>
 </head>
 <body>
     <label>FORMULARZ NR 2.1-1.00.03</label>
-    <table align="center" border="1">
+    <table>
         <tr>
             <td rowspan="2" width=130px><img src="/images/MET_logo.png" alt="METALODLEW SA"></td>
             <td colspan="2" style="text-align: center; font-size: 16px">ZAŁOŻENIA TECHNOLOGICZNE DO OFERTY</td>
@@ -18,7 +29,7 @@
         </tr>
     </table>
 
-    <table align="center" border="1">
+    <table>
         @foreach($details as $detail)
             <tr>
                 <td> {{ $loop->iteration }} </td>
@@ -47,7 +58,7 @@
         @endforeach
     </table>
 
-    <table align="center" border="1">
+    <table>
         <tr>
             <td>
                 <i>Obr. mech.: </i>  {!! $machining_show !!}
@@ -68,13 +79,13 @@
         </tr>
     </table>
 
-    <table align="center" border="1">
+    <table>
         <tr height=30px>
             <td>Opracował:
                 @if($offer->date_tech_out)
                     {{ $offer -> date_tech_out }}
                 @else
-                    {{ date("Y-m-d") }}
+                    {{ date('Y-m-d') }}
                 @endif
                     {{ $offer->tech_memb }}
             </td>
@@ -82,12 +93,12 @@
                 @if($offer->date_tech_out)
                     {{ $offer -> date_tech_out }}
                 @else
-                    {{ date("Y-m-d") }}
+                    {{ date('Y-m-d') }}
                 @endif
             </td>
         </tr>
     </table>
-    <div id="1"><i> Wydrukowano: {{ date("Y-m-d") }}</i></div>
+    <div id="1"><i> Wydrukowano: {{ date('Y-m-d') }}</i></div>
 </body>
 </html>
 

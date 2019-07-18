@@ -74,8 +74,7 @@
                     { data: 'pattern_name', name: 'pattern_name' },
                     { data: 'last_order', name: 'last_order' },
                     { data: 'orders_amount', name: 'orders_amount' },
-                    { data: 'area',
-                        name: 'area',
+                    { data: 'area', name: 'area',
                         render: $.fn.dataTable.render.number( ' ', ',', 2) 
                     },
                     { data: 'layer_number', name: 'layer_number' },
@@ -125,7 +124,7 @@
             // Setup - add a text input to each footer cell
             $('#example tfoot th').each( function () {
                 var title = $(this).text();
-                $(this).html( '<input type="text" placeholder="Szukaj '+title+'" />' );
+                $(this).html( '<input type="text" placeholder="Szukaj ' + title + '" />' );
             } );
 
             // DataTable

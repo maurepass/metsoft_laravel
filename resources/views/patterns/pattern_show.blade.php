@@ -5,14 +5,14 @@
 @endsection
 
 @section('content')
-    <div style="text-align: center;	font-size: 30px;padding: 1px; margin:40px 1px 1px 1px;">Karta modelu</div>
-    <div style="font-size: 22px; text-align:center;padding:20px">
-        <label style="padding:20px">Nazwa firmy:<b>{{ $pattern->customer }}</b></label>
-        <label style="padding:20px">Nazwa odlewu:<b>{{ $pattern->pattern_name }}</b></label>
-        <label style="padding:20px">Numer rysunku:<b>{{ $pattern->drawing_number }}</b></label>
+    <div style="text-align: center;	font-size: 30px; padding: 1px; margin: 40px 1px 1px 1px;">Karta modelu</div>
+    <div style="font-size: 22px; text-align: center; padding: 20px">
+        <label style="padding: 20px">Nazwa firmy:<b>{{ $pattern->customer }}</b></label>
+        <label style="padding: 20px">Nazwa odlewu:<b>{{ $pattern->pattern_name }}</b></label>
+        <label style="padding: 20px">Numer rysunku:<b>{{ $pattern->drawing_number }}</b></label>
     </div>
 
-    <table class="table table-bordered table-striped" style="width:60%; margin:auto">
+    <table class="table table-bordered table-striped" style="width: 60%; margin: auto">
         <thead>
             <tr>
                 <th>Lp</th>

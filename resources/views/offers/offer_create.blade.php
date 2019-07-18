@@ -42,7 +42,7 @@
                                 <option value="{{ $tech_member->id }}" @if($tech_member->id == 4) selected @endif >{{ $tech_member->first_name }} </option>
                             @endforeach
                         </select><br></li>
-                    <li><label>Data przekazania do WZT:</label><input name="date_tech_in" type="text" id="datepicker" value="{{ date("Y-m-d") }}" size="35"></li>
+                    <li><label>Data przekazania do WZT:</label><input name="date_tech_in" type="text" id="datepicker" value="{{ date('Y-m-d') }}" size="35"></li>
                     <button>Dodaj nową ofertę</button>
                 </ul>
             </fieldset>

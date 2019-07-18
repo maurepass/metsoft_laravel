@@ -23,7 +23,7 @@
         });
     </script>
 
-    <form action='stats' method="GET" class="fieldset" > <input type="hidden" name="_token" value="{{ csrf_token() }}">
+    <form action="stats" method="GET" class="fieldset" > <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <fieldset >
             <legend>Wybierz okres</legend>
                 <ul>

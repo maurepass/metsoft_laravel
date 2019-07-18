@@ -103,7 +103,7 @@
             // Setup - add a text input to each footer cell
             $('#example tfoot th').each( function () {
                 var title = $(this).text();
-                $(this).html( '<input type="text" placeholder="Szukaj '+title+'" />' );
+                $(this).html( '<input type="text" placeholder="Szukaj ' + title + '" />' );
             } );
          
             // DataTable

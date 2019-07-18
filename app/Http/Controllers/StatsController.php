@@ -24,7 +24,7 @@ class StatsController extends Controller
             $date_stats_to = $request->date_stats_to;
         } else {
             $date_stats_from = date("Y-m-01");
-            $date_stats_to = date("Y-m-d");
+            $date_stats_to = date('Y-m-d');
         }
 
         $offers = Offer::whereBetween('date_tech_out', [$date_stats_from, $date_stats_to])->get();
@@ -82,6 +82,6 @@ class StatsController extends Controller
 
         $this->insertLog('stats');
 
-        return view('offers.stats', compact('date_stats_from', "date_stats_to", "tech_stats", "detail_stats", "statuses_stats"));
+        return view('offers.stats', compact('date_stats_from', 'date_stats_to', 'tech_stats', 'detail_stats', 'statuses_stats'));
     }
 }

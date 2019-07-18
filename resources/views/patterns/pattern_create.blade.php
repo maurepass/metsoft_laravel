@@ -57,7 +57,7 @@
                 <li><label>Numer indeksu modelu</label> <input name="pattern_index" type="text" size="50"><br></li>
                 <li><label>Weryfikacja</label> <input name="verification" type="text" size="50"><br></li>
                 <li><label>Uwagi</label> <input name="remarks" type="text" size="50"><br></li>
-                <li><label>Data weryfikacji</label> <input name="verification_date" type="text" id="datepicker3" value="{{ date("Y-m-d") }}"> <br></li>
+                <li><label>Data weryfikacji</label> <input name="verification_date" type="text" id="datepicker3" value="{{ date('Y-m-d') }}"> <br></li>
                 <li><label>Nazwisko</label> <input name="surname" type="text" size="50"><br></li>
                 <li><label>Status</label>
                     <select name="status_id" >
@@ -66,7 +66,7 @@
                         @endforeach
                     </select><br>
                 </li>
-                <li><label>Data</label> <input name="move_in" type="text" id="datepicker1" value="{{ date("Y-m-d") }}"><br></li>
+                <li><label>Data</label> <input name="move_in" type="text" id="datepicker1" value="{{ date('Y-m-d') }}"><br></li>
                 <button>Zapisz</button>
             </ul>
         </fieldset>

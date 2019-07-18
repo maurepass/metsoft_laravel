@@ -10,7 +10,7 @@
 {{--
 <div class="alert">Pokazuje wszyskie pozycje w których odlewów wysłanych jest mniej niż zamówionych</div>
 --}}
-    <table id="example" class="table table-striped table-bordered table-hover table-condensed" style="font-size:12px; width:100%">
+    <table id="example" class="table table-striped table-bordered table-hover table-condensed" style="font-size: 12px; width: 100%">
         <thead>
             <tr>
                 {{-- <th>Lp</th> --}}
@@ -131,7 +131,7 @@
             // Setup - add a text input to each footer cell
             $('#example tfoot th').each( function () {
                 var title = $(this).text();
-                $(this).html( '<input type="text" placeholder="Szukaj '+title+'" />' );
+                $(this).html( '<input type="text" placeholder="Szukaj ' + title + '" />' );
             } );
          
             // DataTable
@@ -150,7 +150,7 @@
                 } );
             } );
 
-            $(".iframe").colorbox({iframe:true, width:"90%", height:"90%", });
+            $(".iframe").colorbox({iframe: true, width: "90%", height: "90%", });
         } );
     </script>
 @endpush

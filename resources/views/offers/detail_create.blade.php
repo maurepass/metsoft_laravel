@@ -46,10 +46,10 @@
                 <li><label>Obróbka cieplna:</label>
                     <select name="heat_treat">
                         @foreach($parameters['heat_treatments'] as $heat_treatment)
-                                @if($mat_type == "steel")
-                                    <option value="{{ $heat_treatment->term }}" @if($heat_treatment->term == "normalizacja") selected @endif >{{$heat_treatment->term }}</option>
+                                @if($mat_type == 'steel')
+                                    <option value="{{ $heat_treatment->term }}" @if($heat_treatment->term == 'normalizacja') selected @endif >{{$heat_treatment->term }}</option>
                                 @else
-                                    <option value="{{ $heat_treatment->term }}" @if( $heat_treatment->term == "brak") selected @endif>{{ $heat_treatment->term }}</option>
+                                    <option value="{{ $heat_treatment->term }}" @if( $heat_treatment->term == 'brak') selected @endif>{{ $heat_treatment->term }}</option>
                                 @endif
                         @endforeach
                     </select><br>
@@ -76,7 +76,7 @@
                 <li><label>Atest:</label>
                     <select name="atest">
                         @foreach($parameters['atest_types'] as $atest)
-                            <option value="{{ $atest->atest }}" @if($atest->atest == "3.1 wg PN-EN 10204") selected @endif>{{ $atest->atest }}</option>
+                            <option value="{{ $atest->atest }}" @if($atest->atest == '3.1 wg PN-EN 10204') selected @endif>{{ $atest->atest }}</option>
                         @endforeach
                     </select><br>
                 </li>
