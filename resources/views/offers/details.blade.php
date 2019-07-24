@@ -65,7 +65,11 @@
                 order: [[0, 'desc']],
                 ajax: "{{ route('offers.details-data') }}",              
                 columns: [
-                    {data: 'offer_id' },
+                    {data: 'offer.offer_no',
+                    "fnCreatedCell":function(nTd, sData, oData, iRow, iCol){
+                                 $(nTd).html('<a href="/offers/' + oData.offer_id + '" target="_blank" >' + sData +'</a>');
+                         }
+                    },
                     {data: 'cast_name' },
                     {data: 'drawing_no' },
                     {data: 'material.material' },

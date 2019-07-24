@@ -12,7 +12,6 @@
             <ul>
                 <li><label>Wpisz nr rys.:</label><input type="text" name="drawing_no" size="50"><br></li>
                 <li><label>Wpisz nazwę odlewu:</label><input type="text" name="cast_name" size="50"><br></li>
-                <li><label>Wpisz nr oferty:</label><input type="text" name="offer_no" size="50"><br></li>
                 <button>Szukaj</button>         
             </ul>
         </fieldset>

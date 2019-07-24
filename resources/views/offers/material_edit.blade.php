@@ -12,7 +12,7 @@
             <fieldset>
                 <legend>Edytuj material</legend>
                 <ul>
-                    <li><label>Material</label> <input name="material" type="text" size=50 value="{{ $material->material }}"><br></li>
+                    <li><label>Material</label> <input name="material" type="text" size=50 value="{{ $material->material }}" required><br></li>
                     <li><label>Gr. mat.:</label>
                         <select name="mat_group_id" >
                             @foreach($mat_groups as $mat_group)

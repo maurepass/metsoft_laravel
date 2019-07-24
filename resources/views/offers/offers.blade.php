@@ -53,7 +53,7 @@
                 pageLength: 50,
                 serverSide: true,
                 autoWidth: false,
-                order: [[4, 'desc']],
+                order: [[4, 'desc'], [0, 'desc']],
                 ajax: "{{ route('offers.data') }}",
                 columns: [
                     {data: 'offer_no', name: 'offer_no',
@@ -93,9 +93,9 @@
                                 var start = new Date(oData.date_tech_in);
                                 var end   = new Date();
                                 var diff  = new Date(end - start);
-                                var days  = diff/1000/60/60/24 - 0.5; // [- 0.5] => increase amount of days at 12:00 midnight instead of 12:00 noon
+                                var days  = Math.round(diff/1000/60/60/24 - 0.5); // [- 0.5] => increase amount of days at 12:00 midnight instead of 12:00 noon
                                 
-                                $(nTd).html(days.toFixed(0));
+                                $(nTd).html(days);
                             }
                          }
                     },

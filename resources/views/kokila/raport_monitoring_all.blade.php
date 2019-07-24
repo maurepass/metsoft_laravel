@@ -60,8 +60,8 @@
                 @endif
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $cast->numer_MET }}</td>
-                    <td>{{ $cast->company }}</td>
-                    <td>{{ $cast->nazwa }}</td>
+                    <td>{{ $cast->customer }}</td>
+                    <td>{{ $cast->name }}</td>
                     <td>{{ $cast->picture_number }}</td>
                     <td>{{ $cast->materialname }}</td>
                     <td>{{ $cast->cast_weight }}</td>

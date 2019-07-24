@@ -22,7 +22,7 @@ class DetailsController extends Controller
     {
         $this->detail = $detail;
         $this->offer = $offer;
-        $this->middleware('auth');
+        $this->middleware('auth', ['except' => ['getIndexDetails', 'getDataDetails']]);
     }
 
     protected function getParameters()

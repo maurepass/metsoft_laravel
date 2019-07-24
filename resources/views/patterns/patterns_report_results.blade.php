@@ -54,8 +54,7 @@
             $total_area=0;
         @endphp
         @foreach( $patterns as $pattern)
-            @if($pattern->status != 'Zabrany przez klienta' && $pattern->status != 'Zezłomowany' && $pattern->status != 'Brak modelu' && $pattern->status != 'Wypożyczony przez klienta') 
-
+            @if($pattern->status_id != [4, 5, 6, 7])
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $pattern->customer }}</td>
@@ -65,7 +64,7 @@
                     @php
                         $total_area += $pattern->area;
                     @endphp
-                    <td>{{ $pattern->last_order }}</td>
+                    <td class="text-right">{{ $pattern->last_order }}</td>
                     <td class="text-right">{{ $pattern->time }}</td>
                 </tr>
             @endif

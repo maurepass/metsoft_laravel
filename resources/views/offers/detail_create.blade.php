@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <form class="fieldset" action="{{ route('offers.details.create', ['id' => $offer_id]) }}" method="post" >
+    <form class="fieldset" action="{{ route('offers.details.store', ['id' => $offer_id]) }}" method="post" >
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <fieldset>
             <legend>Dodaj nowy odlew</legend>

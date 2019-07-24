@@ -248,7 +248,7 @@ class PatternsController extends Controller
         $patterns = $this->pattern
             ->select('*', DB::raw('timestampdiff(month, last_order, curdate()) as time'))
             // ->where('customer', 'like', '%' . $customer1 . '%')
-            ->whereRaw('customer like ? or customer like ? or customer like ?', [$customer1, $customer2, $customer3])
+            ->whereRaw('customer like ? or customer like ? or customer like ?', ['%'.$customer1.'%', '%'.$customer2.'%', '%'.$customer3.'%'])
             ->get();
 
         $customers = $this->pattern

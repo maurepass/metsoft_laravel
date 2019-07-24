@@ -31,27 +31,12 @@ class SearchController extends Controller
     public function searchDetailResults(Request $request)
     {
         $drawing_no = $request->input('drawing_no');
-        $drawing_no = '%' . $drawing_no . '%';
-
         $cast_name = $request->input('cast_name');
-        $cast_name = '%' . $cast_name . '%';
-
-        $offer_no = $request->input('offer_no');
-
         $materials = Material::all();
 
-        if ($offer_no != '') {
-            $offer_no = '%' . $offer_no . '%';
-            $offer_id = $this->offer->where('offer_no', 'like', $offer_no)->first();
-            $offer_id = $offer_id->id;
-        } else {
-            $offer_id = '%';
-        }
-
         $details = $this->detail
-            ->where('drawing_no', 'like', $drawing_no)
-            ->where('cast_name', 'like', $cast_name)
-            ->where('offer_id', 'like', $offer_id)
+            ->where('drawing_no', 'like', '%' . $drawing_no . '%')
+            ->where('cast_name', 'like', '%' . $cast_name . '%')
             ->orderBy('id', 'desc')
             ->get();
         

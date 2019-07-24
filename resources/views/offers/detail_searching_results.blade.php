@@ -58,7 +58,7 @@
                 @foreach($details as $detail)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td><a href="{{ route('offers.show', ['offer' => $detail->id_offer]) }} " target="_blank">{{ $detail->offer->offer_no }}</a></td>
+                        <td><a href="{{ route('offers.show', ['offer' => $detail->offer_id]) }} " target="_blank">{{ $detail->offer->offer_no }}</a></td>
                         <td>{{ $detail->cast_name }}</td>
                         <td>{{ $detail->drawing_no }}</td>
                         <td>{{ $detail->material->material }}</td>

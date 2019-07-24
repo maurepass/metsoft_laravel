@@ -10,7 +10,7 @@
         <fieldset>
             <legend>Dodaj nowy material</legend>
             <ul>
-                <li><label>Material</label> <input name="material" type="text" size=50 placeholder="LII500 wg PN-85/H-83152"><br></li>
+                <li><label>Material</label> <input name="material" type="text" size=50 placeholder="LII500 wg PN-85/H-83152" required><br></li>
                 <li><label>Gr. mat.:</label>
                     <select name="mat_group_id" >
                         <option value="11">Wybierz</option>

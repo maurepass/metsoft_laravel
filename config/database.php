@@ -47,7 +47,7 @@ return [
         'mysql' => [
             'driver'    => 'mysql',
             'host'      => 'localhost',
-            'database'  => 'offers_django',
+            'database'  => 'offers_dev',
             'username'  => 'root',
             'password'  => 'zaq12#$ESZ',
             'charset'   => 'utf8',

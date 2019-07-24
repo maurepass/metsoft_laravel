@@ -131,10 +131,10 @@ class OffersController extends Controller
             session()->put('offer_status', 'move_out');
         }
 
-        $temp = session()->get('offer_status');
+        $offer_status = session()->get('offer_status');
         session()->put('offer_status', '');
         
-        if ($temp == 'move_out') {
+        if ($offer_status == 'move_out') {
             return redirect()->route('offers.index');
         } else {
             return redirect()->route('offers.details.index', ['offer' => $id]);
