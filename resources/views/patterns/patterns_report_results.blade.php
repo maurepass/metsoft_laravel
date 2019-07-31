@@ -52,13 +52,14 @@
         </tr>
         @php 
             $total_area=0;
+            $i = 1;
         @endphp
         @foreach( $patterns as $pattern)
-            @if($pattern->status_id != [4, 5, 6, 7])
+            @if(!in_array($pattern->status_id, [4, 5, 6, 7, 8]))
                 <tr>
-                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $i++ }}</td>
                     <td>{{ $pattern->customer }}</td>
-                    <td>{{ $pattern->drawing_number }}</td>
+                    <td>{{ $pattern->drawing_number }}</td>f
                     <td>{{ $pattern->pattern_name }}</td>
                     <td class="text-right">{{ number_format($pattern->area, 2, ',', ' ') }}</td>
                     @php

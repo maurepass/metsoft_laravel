@@ -83,7 +83,7 @@
             <form action="{{ route('offers.update', ['offer' => $offer->id]) }}" method="post" >
                 <input name="_method" type="hidden" value="patch">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <input name="notices" type="hidden" value="{{ $uwagi }}"/>
+                <input name="notices" type="hidden" value="{{ $notices }}"/>
                 <button >Wstaw domyślne uwagi</button>
             </form>
 

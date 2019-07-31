@@ -27,7 +27,7 @@ class OffersController extends Controller
 
     public function getDataIndex()
     {
-        $query = Offer::with('offer_status', 'user_mark', 'user_tech');
+        $query = Offer::with('offer_status', 'user_mark', 'user_tech')->select('offers.*');
         return Datatables::of($query)->make(true);
     }
    

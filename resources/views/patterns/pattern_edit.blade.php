@@ -47,7 +47,9 @@
                 <li><label>Status</label>   
                     <select name="status_id">
                         @foreach ($statuses as $status)
-                            <option value="{{ $status->id }}" @if($status->id == $pattern->status_id) selected @endif >{{ $status->status }}</option>
+                            @if($status->id != 8)
+                                <option value="{{ $status->id }}" @if($status->id == $pattern->status_id) selected @endif >{{ $status->status }}</option>
+                            @endif
                         @endforeach
                     </select>
                 </li>

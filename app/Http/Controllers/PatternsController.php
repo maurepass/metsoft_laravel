@@ -31,7 +31,7 @@ class PatternsController extends Controller
 
     public function getDataIndex()
     {
-        $query = $this->pattern->with('pattern_status');
+        $query = $this->pattern->with('pattern_status')->select('patterns.*');
         return Datatables::of($query)->make(true);
     }
 

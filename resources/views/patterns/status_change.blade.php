@@ -15,15 +15,17 @@
 
     <div style="text-align:center">
         @foreach($statuses as $status)
-            <div style="display: inline-block; padding: 30px 30px">
-                <form method="post" action="{{ route('patterns.status-change', ['id' => $pattern->id]) }}">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <input type="hidden" name="id" value="{{ $pattern->id }}">
-                    <input type="hidden" name="status_id" value="{{ $status->id }}">
-                    <input type="hidden" name="move_in" value="{{ date('Y-m-d') }}">
-                    <button onclick="parent.$.fn.colorbox.close();" style="font-size:40px">{{ $status->status }}</button>
-                </form>
-            </div>
+            @if($status->id != 8)
+                <div style="display: inline-block; padding: 30px 30px">
+                    <form method="post" action="{{ route('patterns.status-change', ['id' => $pattern->id]) }}">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="hidden" name="id" value="{{ $pattern->id }}">
+                        <input type="hidden" name="status_id" value="{{ $status->id }}">
+                        <input type="hidden" name="move_in" value="{{ date('Y-m-d') }}">
+                        <button onclick="parent.$.fn.colorbox.close();" style="font-size:40px">{{ $status->status }}</button>
+                    </form>
+                </div>
+            @endif
         @endforeach
     </div>
 @endsection

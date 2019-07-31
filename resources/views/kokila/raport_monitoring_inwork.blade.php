@@ -8,7 +8,7 @@
 @section('content')
 
 <div class="table_title">Monitoring zleceń (w produkcji)</div>
-<div class="alert">Pokazuje wszyskie pozycje w których odlewów wysłanych jest mniej niż zamówionych</div>
+<div class="alert">Pokazuje wszyskie pozycje w których odlewów odebranych jest mniej niż zamówionych</div>
 
     {{--<table id="example" class="display" cellspacing="0" width="100%"> --}}
     <table id="example" class="table table-bordered table-striped table-hover" >
@@ -56,7 +56,7 @@
         </tfoot>
         <tbody>
             @foreach( $casts as $cast)
-                @if($cast->cast_pcs > ($cast->wyslane + $cast->anulowane))
+                @if($cast->cast_pcs > ($cast->wyslane + $cast->anulowane + $cast->odebrane))
                     <tr>    
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $cast->numer_MET }}</td>

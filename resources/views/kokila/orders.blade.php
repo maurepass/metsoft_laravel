@@ -134,7 +134,7 @@
                     {data: 'id', name: 'id',
                     "render": function(data, type, row, meta){
                             if(type === 'display'){
-                                data = '<a href="/reports/orders/' + data + '/edit">Edytuj</a>';
+                                data = '<a href="/tech/orders/' + data + '/edit">Edytuj</a>';
                             }
                             return data;
                         }

@@ -49,7 +49,7 @@
                 pageLength: 50,
                 serverSide: true,
                 autoWidth: false,
-                order: [[0, 'desc']],
+                order: [[8, 'desc']],
                 ajax: "{{ route('odbiory-data') }}",              
                  columns: [
                     {data: 'id_cast' },

@@ -314,7 +314,7 @@ class KokilaReportsController extends Controller
 
     public function getDataUzyski()
     {
-        $query = Cast::with('porder', 'material')->where('pc_number', 1);
+        $query = Cast::with('porder', 'material')->select('casts.*')->where('pc_number', 1);
         return Datatables::of($query)->make(true);
     }
 

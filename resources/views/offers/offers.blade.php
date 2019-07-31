@@ -68,20 +68,14 @@
                     {data: 'date_tech_out' },
                     {data: 'positions_amount' },
                     {data: 'id', name: 'id',
-                    "render": function(data, type, row, meta){
-                            if(type === 'display'){
-                                data = '<a href="/offers/' + data +'/details">Detale</a>';
-                            }
-                            return data;
-                        }
+                        "fnCreatedCell":function(nTd, sData, oData, iRow, iCol){
+                                 $(nTd).html('<a href="/offers/' + sData +'/details">Detale</a>');
+                         }
                     },
                     {data: 'id', name: 'id',
-                    "render": function(data, type, row, meta){
-                            if(type === 'display'){
-                                data = '<a href="/offers/' + data + '" target="_blank">Do druku</a>';
-                            }
-                            return data;
-                        }
+                        "fnCreatedCell":function(nTd, sData, oData, iRow, iCol){
+                                 $(nTd).html('<a href="/offers/' + sData + '" target="_blank">Do druku</a>');
+                         }
                     },
                     {data: 'offer_status.offer_status' },
                     {data: 'days_amount', name: 'days_amount',

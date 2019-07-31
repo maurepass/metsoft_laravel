@@ -43,9 +43,9 @@ class DetailsController extends Controller
         $offer = $this->offer->find($id);
         $details = $offer->detail;
         $statuses = OfferStatus::all();
-        $uwagi = Storage::get('/public/uwagi.txt');
+        $notices = Storage::get('/public/notices.txt');
 
-        return view('offers.offer_details', compact('offer', 'details', 'statuses', 'uwagi'));
+        return view('offers.offer_details', compact('offer', 'details', 'statuses', 'notices'));
     }
 
     public function create(Request $request, $offer_id)
