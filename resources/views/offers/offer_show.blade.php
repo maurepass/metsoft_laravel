@@ -87,7 +87,7 @@
                 @else
                     {{ date('Y-m-d') }}
                 @endif
-                    {{ $offer->tech_memb }}
+                    {{ $offer->user_tech->first_name }}
             </td>
             <td>Sprawdził:
                 @if($offer->date_tech_out)

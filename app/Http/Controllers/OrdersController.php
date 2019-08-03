@@ -61,7 +61,7 @@ class OrdersController extends Controller
    
     public function getIndexData()
     {
-        $query = Order::with('tech_memb', 'ord_status');
+        $query = Order::with('tech_memb', 'ord_status')->select('orders.*');
         return Datatables::of($query)->make(true);
     }
 

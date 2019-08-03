@@ -70,7 +70,7 @@
                 pageLength: 50,
                 serverSide: true,
                 autoWidth: false,
-                order: [[19, 'desc']],
+                order: [[14, 'asc'],[19, 'desc']],
                 ajax: "{{ route('orders.data') }}",
                 columns: [
                     {data: 'numer_MET', name: 'numer_MET'},

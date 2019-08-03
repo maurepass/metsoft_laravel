@@ -23,7 +23,7 @@ class KokilaReportsController extends Controller
 
     public function getDataOdbiory()
     {
-        $query = Operation::with('cast', 'cast.porder', 'cast.material', 'cast.porder.customer')
+        $query = Operation::with('cast', 'cast.porder', 'cast.material', 'cast.porder.customer')->select('operations.*')
                             ->where([
                                 ['id_opdict', 38],
                                 ['completion_date1', '<>', '']
@@ -40,7 +40,7 @@ class KokilaReportsController extends Controller
 
     public function getDataZalania()
     {
-        $query = Operation::with('cast', 'cast.porder', 'cast.material', 'cast.porder.customer')
+        $query = Operation::with('cast', 'cast.porder', 'cast.material', 'cast.porder.customer')->select('operations.*')
                             ->where([
                                 ['id_opdict', 6],
                                 ['completion_date1', '<>', '']
@@ -57,7 +57,7 @@ class KokilaReportsController extends Controller
 
     public function getDataNiezgodnosci()
     {
-        $query = Operation::with('cast', 'cast.porder', 'cast.material', 'cast.porder.customer', 'operation_dict')
+        $query = Operation::with('cast', 'cast.porder', 'cast.material', 'cast.porder.customer', 'operation_dict')->select('operations.*')
                             ->where('accordance', 3);
 
         return Datatables::of($query)->make(true);
@@ -71,7 +71,7 @@ class KokilaReportsController extends Controller
 
     public function getDataUwagi()
     {
-        $query = Operation::with('cast', 'cast.porder', 'cast.material', 'cast.porder.customer', 'operation_dict', 'accordance_dict')
+        $query = Operation::with('cast', 'cast.porder', 'cast.material', 'cast.porder.customer', 'operation_dict', 'accordance_dict')->select('operations.*')
                             ->whereNotNull('operations.notes')
                             ->where('operations.notes', '<>', '');
 
@@ -99,7 +99,7 @@ class KokilaReportsController extends Controller
 
     public function weightpergroup()
     {
-        $casts = Cast::selectRaw('mat_calc_group, sum(cast_weight) as tonaz')
+        $casts = Cast::selectRaw('mat_calc_group, sum(cast_weight) as tonaz')->select('casts.*')
                     ->groupBy('mat_calc_group')
                     ->whereNotIn('cast_status', [3, 4, 5, 6])
                     ->get();
